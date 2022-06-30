@@ -1,0 +1,6 @@
+Vectors
+
+in this section, we will learn --->
+
+* to create vectors in R, name them, select elements from them
+* and compare different vectors

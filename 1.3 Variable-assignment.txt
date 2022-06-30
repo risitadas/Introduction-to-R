@@ -1,0 +1,65 @@
+Variable assignments
+
+
+a basic concept in (statistical) programming is called a variable.
+
+a variable allows us to store a value (e.g. 4) or an object (e.g. a function description) in R 
+we can then later use this variable's name to easily access the value or the object that is stored within this variable
+
+for example :
+
+we can assign a value 4 to a variable my_var with the command
+
+my_var <- 4 
+
+
+
+eg (i) ---> 
+
+# Assign the value 42 to x
+x <- 42
+
+# Print out the value of the variable x
+x
+
+
+eg (ii) --->
+
+Suppose we have a fruit basket with five apples, as a data analyst in training, 
+we want to store the number of apples in a variable with the name my_apples :
+
+# Assign the value 5 to the variable my_apples
+my_apples <- 5
+
+# Print out the value of the variable my_apples
+my_apples
+
+
+eg (iii) --->
+
+we want to calculate how many pieces of fruit we have in total,
+after adding another basket of six oranges:
+
+# Assign a value to the variables my_apples and my_oranges
+my_apples  <- 5
+my_oranges <- 6
+
+# Add these two variables together
+my_apples + my_oranges
+
+# Create the variable my_fruit
+my_fruit <- my_apples + my_oranges
+my_fruit
+
+
+eg (iv) :
+
+# Assign a value to the variable my_apples
+my_apples <- 5 
+
+# Fix the assignment of my_oranges
+my_oranges <- 6 
+
+# Create the variable my_fruit and print it out
+my_fruit <- my_apples + my_oranges 
+my_fruit

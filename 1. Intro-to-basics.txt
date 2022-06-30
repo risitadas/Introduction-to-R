@@ -1,0 +1,7 @@
+Intro to basics :
+ 
+we will learn --->
+
+* to use the console as a calculator 
+* how to assign variables
+* the basic data types in R

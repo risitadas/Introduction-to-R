@@ -1,0 +1,13 @@
+How it works?
+
+
+R makes use of the # sign to add comments, so that we and others can understand 
+what the R code is about,comments are not run as R code,so they will not influence our result
+
+For example, Calculate 3 + 4 , is a comment :
+
+# Calculate 3 + 4
+3 + 4
+
+# Calculate 6 + 12
+6 + 12

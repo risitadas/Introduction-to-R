@@ -1,0 +1,36 @@
+Selection by comparison - Step 2
+
+
+* previously we used 
+
+selection_vector <- poker_vector > 0 
+
+to find the days on which we had a positive poker return
+
+* now, we would like to know not only the days on which we won, but also how much weu won on those days
+
+* we can select the desired elements, by putting 
+selection_vector 
+between the square brackets that follow poker_vector:
+
+poker_vector[selection_vector]
+
+R knows what to do when we pass a logical vector in square brackets: 
+it will only select the elements that correspond to TRUE in selection_vector.
+
+
+eg ---> using selection_vector in square brackets to assign the amounts 
+that we won on the profitable days to the variable poker_winning_days
+
+# Poker and roulette winnings from Monday to Friday:
+poker_vector <- c(140, -50, 20, -120, 240)
+roulette_vector <- c(-24, -50, 100, -350, 10)
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+names(poker_vector) <- days_vector
+names(roulette_vector) <- days_vector
+
+# Which days did you make money on poker?
+selection_vector <- poker_vector > 0
+
+# Select from poker_vector these days
+poker_winning_days <- poker_vector[selection_vector]

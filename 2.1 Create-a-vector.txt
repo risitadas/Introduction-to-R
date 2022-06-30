@@ -1,0 +1,64 @@
+Create a vector
+
+
+eg (i) :
+
+# Define the variable vegas
+vegas <- "Go!"
+
+
+
+* vectors are one-dimension arrays that can hold numeric data, character data, or logical data
+
+* in other words, a vector is a simple tool to store data
+
+For example,we can store your daily gains and losses in the casinos
+
+* in R, you create a vector with the combine function c() ,
+we place the vector elements separated by a comma between the parentheses
+
+For example:
+
+numeric_vector <- c(1, 2, 3)
+character_vector <- c("a", "b", "c")
+Once we have created these vectors in R, we use them to do calculations!
+
+eg (ii) :
+
+numeric_vector <- c(1, 10, 49)
+character_vector <- c("a", "b", "c")
+
+# Complete the code for boolean_vector
+boolean_vector <- c(TRUE, FALSE, TRUE)
+
+
+eg (iii) :
+
+for this we collected all the winnings and losses for the last week of two games, as follows,
+
+For poker_vector:
+
+On Monday you won $140
+Tuesday you lost $50
+Wednesday you won $20
+Thursday you lost $120
+Friday you won $240
+
+For roulette_vector:
+
+On Monday you lost $24
+Tuesday you lost $50
+Wednesday you won $100
+Thursday you lost $350
+Friday you won $10
+
+we only played poker and rouletter, since there was a delegation of mediums that occupied the craps tables,
+hence, to be able to use this data in R, we decide to create the variables poker_vector and roulette_vector
+
+now assigning winnings/losses for both, separately,
+
+# Poker winnings from Monday to Friday
+poker_vector <- c(140, -50, 20, -120, 240)
+
+# Roulette winnings from Monday to Friday
+roulette_vector <-  c(-24, -50, 100, -350, 10)

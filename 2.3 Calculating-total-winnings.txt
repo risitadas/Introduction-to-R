@@ -1,0 +1,69 @@
+Calculating total winnings
+	=to do arithmetic calculations on vectors
+
+it is important to know that if we sum two vectors in R, it takes the element-wise sum
+
+for example, the following three statements are completely equivalent:
+
+c(1, 2, 3) + c(4, 5, 6)
+c(1 + 4, 2 + 5, 3 + 6)
+c(5, 7, 9)
+
+we can also do the calculations with variables that represent vectors:
+
+a <- c(1, 2, 3) 
+b <- c(4, 5, 6)
+c <- a + b
+
+
+eg (i) --->
+
+A_vector <- c(1, 2, 3)
+B_vector <- c(4, 5, 6)
+
+# Take the sum of A_vector and B_vector
+total_vector <- (A_vector + B_vector)
+  
+# Print out total_vector
+total_vector
+
+
+eg (ii) --->
+
+# Poker and roulette winnings from Monday to Friday:
+poker_vector <- c(140, -50, 20, -120, 240)
+roulette_vector <- c(-24, -50, 100, -350, 10)
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+names(poker_vector) <- days_vector
+names(roulette_vector) <- days_vector
+
+# Assign to total_daily how much you won/lost on each day
+total_daily <- poker_vector + roulette_vector
+
+
+* function sum() calculates the sum of all elements of a vector
+for example, to calculate the total amount of money you have lost/won with poker we do:
+
+total_poker <- sum(poker_vector)
+
+
+eg (iii) --->
+
+# Poker and roulette winnings from Monday to Friday:
+poker_vector <- c(140, -50, 20, -120, 240)
+roulette_vector <- c(-24, -50, 100, -350, 10)
+days_vector <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+names(poker_vector) <- days_vector
+names(roulette_vector) <- days_vector
+
+# Total winnings with poker
+total_poker <- sum(poker_vector)
+
+# Total winnings with roulette
+total_roulette <- sum(roulette_vector)
+
+# Total winnings overall
+total_week <- total_poker + total_roulette
+
+# Print out total_week
+ total_week 

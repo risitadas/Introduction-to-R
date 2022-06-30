@@ -1,0 +1,7 @@
+Matrices
+
+in this section, we will learn :
+
+* how to work with matrices in R
+* we will be able to create matrices 
+* understanding how to do the basic computations with them

@@ -1,0 +1,75 @@
+What's a factor?
+
+
+* the term factor refers to a statistical data type used to store categorical variables 
+* difference between a categorical variable and a continuous variable is that a categorical variable 
+can belong to a limited number of categories
+* a continuous variable, on the other hand, can correspond to an infinite number of values
+* it is important that R knows whether it is dealing with a continuous or a categorical variable, 
+as the statistical models we will develop in the future treat both types differently
+
+------------------------------------
+eg (i) --->
+
+Assign to variable theory the value "factors" ---->
+
+
+# Assign to the variable theory what this chapter is about!
+
+theory <- "factors"
+
+-----------------------------------------
+
+
+* to create factors in R, we can make use of the function factor()
+* first thing that to do is create a vector that contains all the observations that belong to a 
+limited number of categories 
+
+for example, 
+sex_vector contains the sex of 5 different individuals:
+
+sex_vector <- c("Male","Female","Female","Male","Male")
+
+* it is clear that there are two categories, or in R-terms 'factor levels', at work here:
+
+ "Male" and "Female".
+
+the function factor() will encode the vector as a factor:
+
+factor_sex_vector <- factor(sex_vector)
+
+--------------------------------------------
+eg (ii) --->
+
+
+i. convert the character vector sex_vector to a factor with factor() and assign the result 
+to factor_sex_vector
+
+ii. print out factor_sex_vector and assert that R prints out the factor levels 
+below the actual values
+
+
+# Sex vector
+sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+
+# Convert sex_vector to a factor
+factor_sex_vector <- factor(sex_vector)
+
+# Print out factor_sex_vector
+factor_sex_vector 
+
+
+output:
+
+factor_sex_vector 
+
+[1] Male   Female Female Male   Male  
+Levels: Female Male
+
+
+
+
+
+
+
+

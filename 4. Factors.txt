@@ -1,0 +1,8 @@
+Factors
+
+
+we will learn :
+
+* in R, categorical data is stored in factors
+* factors are very important in data analysis
+* how to create, subset, and compare them now

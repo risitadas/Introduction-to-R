@@ -1,0 +1,157 @@
+Worldwide Box Office
+
+
+1 . Calculating the worldwide box office
+
+
+* single most important thing for a movie in order to become an instant legend in Tinseltown 
+is its worldwide box office figures
+
+* to calculate the total box office revenue for the three Star Wars movies,
+we have to take the sum of the US revenue column and the non-US revenue column
+
+* in R, the function rowSums() conveniently calculates the totals for each row of a matrix, 
+this function creates a new vector:
+
+rowSums(my_matrix)
+
+
+Instructions :
+
+i. calculate the worldwide box office figures for the three movies and put
+these vectors in the vector names worldwide_vector
+
+
+-----------------------------------
+
+
+# Construct star_wars_matrix
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region <- c("US", "non-US")
+titles <- c("A New Hope", 
+                 "The Empire Strikes Back", 
+                 "Return of the Jedi")
+               
+star_wars_matrix <- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
+
+# Calculate worldwide box office figures
+worldwide_vector <- rowSums(star_wars_matrix)
+
+
+---------------------------------
+
+
+2. Adding a column for the Worldwide box office
+
+
+* we can add a column or multiple columns to a matrix with the cbind() function, 
+which merges matrices and/or vectors together by column
+
+for example:
+
+big_matrix <- cbind(matrix1, matrix2, vector1 ...)
+
+
+Instructions :
+
+i. add worldwide_vector as a new column to the star_wars_matrix and assign the 
+result to all_wars_matrix and use the cbind() function
+
+--------------------------
+
+# Construct star_wars_matrix
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region <- c("US", "non-US")
+titles <- c("A New Hope", 
+            "The Empire Strikes Back", 
+            "Return of the Jedi")
+               
+star_wars_matrix <- matrix(box_office, 
+                      nrow = 3, byrow = TRUE,
+                      dimnames = list(titles, region))
+
+# The worldwide box office figures
+worldwide_vector <- rowSums(star_wars_matrix)
+
+# Bind the new variable worldwide_vector as a column to star_wars_matrix
+all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
+
+
+--------------------------------
+
+
+
+3. Adding a row
+
+
+* every cbind() has an rbind()
+
+our R workspace, where all variables you defined 'live' (check out what a workspace is), 
+has already been initialized and contains two matrices:
+
+i. star_wars_matrix that we have used all along, with data on the original trilogy,
+ii. star_wars_matrix2, with similar data for the prequels trilogy
+
+* if we want to check out the contents of the workspace, type ls() in the console
+
+
+Instructions :
+
+i) use rbind() to paste together star_wars_matrix and star_wars_matrix2, in this order,
+assign the resulting matrix to all_wars_matrix
+
+---------------------------------
+
+# star_wars_matrix and star_wars_matrix2 are available in your workspace
+star_wars_matrix  
+star_wars_matrix2 
+
+# Combine both Star Wars trilogies in one matrix
+all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
+
+
+----------------------------------
+
+
+4. The total box office revenue for the entire saga
+
+
+* just like cbind() has rbind(), colSums() has rowSums()
+
+Instructions :
+
+i. calculate the total revenue for the US and the non-US region and assign total_revenue_vector ,
+we can use the colSums() function
+
+ii. print out total_revenue_vector to have a look at the results
+
+
+--------------------------
+
+# all_wars_matrix is available in your workspace
+all_wars_matrix
+
+# Total revenue for US and non-US
+total_revenue_vector <- colSums(all_wars_matrix)
+  
+# Print out total_revenue_vector
+total_revenue_vector
+
+
+
+output :
+
+total_revenue_vector
+    US non-US 
+2226.3 2087.8 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+Ordered factors
+
+
+* since "Male" and "Female" are unordered (or nominal) factor levels, 
+R returns a warning message, telling that the greater than operator is not meaningful
+
+* R attaches an equal value to the levels for such factors
+
+* sometimes we will also deal with factors that do have a natural ordering between its categories
+
+
+----------------------------------------------------
+eg (i) --->
+
+assign speed_vector a vector with 5 entries, one for each analyst,
+ each entry should be either "slow", "medium", or "fast". Use the list below:
+
+i. analyst 1 is medium,
+ii. analyst 2 is slow,
+iii. analyst 3 is slow,
+iv. analyst 4 is medium and
+v. analyst 5 is fast.
+
+no need to specify these are factors yet
+
+
+# Create speed_vector
+speed_vector <- c("medium", "slow", "slow", "medium", "fast")

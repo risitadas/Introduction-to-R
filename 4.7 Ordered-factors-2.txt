@@ -1,0 +1,48 @@
+Ordered factors - 2
+
+
+* speed_vector should be converted to an ordinal factor since its categories have a natural ordering
+* by default, the function factor() transforms speed_vector into an unordered factor
+* to create an ordered factor, add two additional arguments: 
+
+ordered and levels.
+
+factor(some_vector,
+       ordered = TRUE,
+       levels = c("lev1", "lev2" ...))
+
+* by setting the argument ordered to TRUE in the function factor(), 
+we indicate that the factor is ordered
+* with the argument levels we give the values of the factor in the correct order
+
+-----------------------------------
+
+eg --->
+
+from speed_vector, 
+create an ordered factor vector: factor_speed_vector,
+set ordered to TRUE, and set levels to c("slow", "medium", "fast")
+
+
+# Create speed_vector
+speed_vector <- c("medium", "slow", "slow", "medium", "fast")
+
+# Convert speed_vector to ordered factor vector
+factor_speed_vector <- factor(speed_vector, ordered = TRUE, levels = c("slow", "medium", "fast"))
+
+# Print factor_speed_vector
+factor_speed_vector
+summary(factor_speed_vector)
+
+
+output:
+
+factor_speed_vector
+
+[1] medium slow   slow   medium fast  
+Levels: slow < medium < fast
+
+summary(factor_speed_vector)
+
+  slow medium   fast 
+     2      2      1 

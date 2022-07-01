@@ -1,0 +1,45 @@
+Factor levels
+
+
+* when we first get a dataset, it contains factors with specific factor levels,
+however, sometimes we want to change the names of these levels for clarity or other reasons,
+R allows us to do this with the function 
+levels():
+
+levels(factor_vector) <- c("name1", "name2",...)
+
+a good illustration is the raw data that is provided by a survey,
+a common question for every questionnaire is the sex of the respondent, 
+here, for simplicity, just two categories were recorded, "M" and "F"
+
+survey_vector <- c("M", "F", "F", "M", "M")
+
+in the time of analyzing the data we to change the factor levels to "Male" and "Female" 
+instead of "M" and "F" for clarity
+
+
+---------------------------------------------
+eg (i) --->
+
+i. check out the code that builds a factor vector from survey_vector, use factor_survey_vector 
+in the next instruction
+
+ii. change the factor levels of factor_survey_vector to c("Female", "Male"),and 
+mind the order of the vector elements here.
+
+
+# Code to build factor_survey_vector
+survey_vector <- c("M", "F", "F", "M", "M")
+factor_survey_vector <- factor(survey_vector)
+
+# Specify the levels of factor_survey_vector
+levels(factor_survey_vector) <- levels(factor_survey_vector) <- c("Female", "Male")
+
+factor_survey_vector
+
+output:
+
+factor_survey_vector
+
+[1] Male   Female Female Male   Male  
+Levels: Female Male

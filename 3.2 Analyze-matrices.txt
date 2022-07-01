@@ -1,0 +1,33 @@
+Analyse matrices
+   ---> analyse the box office numbers of the Star Wars franchise
+
+*three vectors are defined 
+*each one represents the box office numbers from the first three Star Wars movies
+*the first element of each vector indicates the US box office revenue, 
+*the second element refers to the Non-US box office
+
+we have to combine all these figures into a single vector and then build a matrix from this vector
+
+Instructions
+
+1. use c(new_hope, empire_strikes, return_jedi) to combine the three vectors into one vector,
+lets call this vector box_office
+
+2. construct a matrix with 3 rows, where each row represents a movie
+we use the matrix() function to do this so the first argument is the vector box_office, 
+containing all box office figures,next, we'll have to specify nrow = 3 and byrow = TRUE,
+naming the resulting matrix as star_wars_matrix
+
+
+----------------------------------
+
+# Box office Star Wars (in millions!)
+new_hope <- c(460.998, 314.4)
+empire_strikes <- c(290.475, 247.900)
+return_jedi <- c(309.306, 165.8)
+
+# Create box_office
+box_office <- c(new_hope, empire_strikes, return_jedi)
+
+# Construct star_wars_matrix
+star_wars_matrix <- matrix(box_office, byrow = TRUE, nrow = 3)

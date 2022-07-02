@@ -1,0 +1,80 @@
+Selecting elements from a list
+
+
+* list will often be built out of numerous elements and components
+* therefore, getting a single element, multiple elements, or a component out of it is not always 
+	straightforward.
+
+* one way to select a component is using the numbered position of that component
+
+for example, to "grab" the first component of shining_list , we type
+
+shining_list[[1]]
+
+* we refer to the names of the components, with [[ ]] or with the $ sign
+* both will select the data frame representing the reviews:
+
+shining_list[["reviews"]]
+shining_list$reviews
+
+* besides selecting components, we often need to select specific elements out of these components,
+
+ For example, with 
+shining_list[[2]][1] ,
+we select from the second component, 
+
+actors (shining_list[[2]]), 
+the first element ([1]) ,
+
+we see the answer is Jack Nicholson
+
+
+eg --->
+
+i. select from shining_list the vector representing the actors and print out this vector
+ii. select from shining_list the second element in the vector representing the actors and print the same
+
+
+
+# shining_list is already pre-loaded in the workspace
+shining_list
+
+# Print out the vector representing the actors
+shining_list$actors
+
+# Print the second element of the vector representing the actors
+shining_list$actors[2]
+
+
+output : 
+
+shining_list
+
+$moviename
+[1] "The Shining"
+
+$actors
+[1] "Jack Nicholson"   "Shelley Duvall"   "Danny Lloyd"      "Scatman Crothers"
+[5] "Barry Nelson"    
+
+$reviews
+  scores sources                                              comments
+1    4.5   IMDb1                     Best Horror Film I Have Ever Seen
+2    4.0   IMDb2 A truly brilliant and scary film from Stanley Kubrick
+3    5.0   IMDb3                 A masterpiece of psychological horror
+
+
+shining_list$actors
+
+[1] "Jack Nicholson"   "Shelley Duvall"   "Danny Lloyd"      "Scatman Crothers"
+[5] "Barry Nelson"    
+
+
+shining_list$actors[2]
+[1] "Shelley Duvall"
+
+
+
+
+
+

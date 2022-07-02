@@ -1,0 +1,52 @@
+Only planets with rings but shorter
+
+
+function subset() :
+* function is a short-cut to do exactly the same as what we did previously
+
+subset(my_df, subset = some_condition)
+
+
+* first argument of subset() specifies the dataset for which we want a subset
+* by adding the second argument, we give R the necessary information and conditions to select the correct subset
+
+we can rewrite without the need of rings_vector as -
+
+subset(planets_df, subset = rings)
+
+
+eg --->
+
+useing subset() on planets_df to select planets that have a diameter smaller than Earth,
+because the diameter variable is a relative measure of the planet's diameter w.r.t that of planet Earth, 
+our condition is diameter < 1
+
+
+# planets_df is pre-loaded in your workspace
+planets_df
+# Select planets with diameter < 1
+subset(planets_df, subset = diameter < 1)
+
+
+output :
+
+planets_df
+
+     name               type diameter rotation rings
+1 Mercury Terrestrial planet    0.382    58.64 FALSE
+2   Venus Terrestrial planet    0.949  -243.02 FALSE
+3   Earth Terrestrial planet    1.000     1.00 FALSE
+4    Mars Terrestrial planet    0.532     1.03 FALSE
+5 Jupiter          Gas giant   11.209     0.41  TRUE
+6  Saturn          Gas giant    9.449     0.43  TRUE
+7  Uranus          Gas giant    4.007    -0.72  TRUE
+8 Neptune          Gas giant    3.883     0.67  TRUE
+
+
+
+subset(planets_df, subset = diameter < 1)
+
+     name               type diameter rotation rings
+1 Mercury Terrestrial planet    0.382    58.64 FALSE
+2   Venus Terrestrial planet    0.949  -243.02 FALSE
+4    Mars Terrestrial planet    0.532     1.03 FALSE

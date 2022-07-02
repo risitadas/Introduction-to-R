@@ -1,0 +1,56 @@
+Creating a data frame
+
+
+* we construct a data frame with the data.frame() function
+* as arguments, pass the vectors from before: 
+they become the different columns of our data frame
+* because every column has the same length, the vectors we pass should also have the same length
+* it is possible (and likely) that they contain different types of data
+
+
+eg (i) --->
+
+use the function data.frame() to construct a data frame.
+pass the vectors name, type, diameter, rotation and rings as arguments to data.frame(),in this order 
+call the resulting data frame planets_df
+
+
+# Definition of vectors
+name <- c("Mercury", "Venus", "Earth", 
+          "Mars", "Jupiter", "Saturn", 
+          "Uranus", "Neptune")
+type <- c("Terrestrial planet", 
+          "Terrestrial planet", 
+          "Terrestrial planet", 
+          "Terrestrial planet", "Gas giant", 
+          "Gas giant", "Gas giant", "Gas giant")
+diameter <- c(0.382, 0.949, 1, 0.532, 
+              11.209, 9.449, 4.007, 3.883)
+rotation <- c(58.64, -243.02, 1, 1.03, 
+              0.41, 0.43, -0.72, 0.67)
+rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
+
+# Create a data frame from the vectors
+planets_df <- data.frame(name, type, diameter, rotation, rings)
+
+
+------------------------
+
+eg (ii) --->
+
+use str() to investigate the structure of the new planets_df variable
+
+
+# Check the structure of planets_df
+str(planets_df)
+
+output:
+
+str(planets_df)
+'data.frame':	8 obs. of  5 variables:
+ $ name    : chr  "Mercury" "Venus" "Earth" "Mars" ...
+ $ type    : chr  "Terrestrial planet" "Terrestrial planet" "Terrestrial planet" "Terrestrial planet" ...
+ $ diameter: num  0.382 0.949 1 0.532 11.209 ...
+ $ rotation: num  58.64 -243.02 1 1.03 0.41 ...
+ $ rings   : logi  FALSE FALSE FALSE FALSE TRUE TRUE ...
+

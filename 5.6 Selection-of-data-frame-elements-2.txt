@@ -1,0 +1,30 @@
+Selection of data frame elements-2
+
+
+* instead of using numerics to select elements of a data frame, 
+we can also use the variable names to select columns of a data frame
+
+* suppose we want to select the first three elements of the type column, one way to do this is
+
+	planets_df[1:3,2]
+
+* one possible disadvantage of this approach is that we have to know (or look up)
+ the column number of type, which gets hard if we have a lot of variables
+* it is often easier to just make use of the variable name:
+
+planets_df[1:3,"type"]
+
+
+eg--->
+
+select and print out the first 5 values in the "diameter" column of planets_df
+
+# The planets_df data frame from the previous exercise is pre-loaded
+planets_df[1:5,"diameter"]
+# Select first 5 values of diameter column
+
+
+output:
+
+[1]  0.382  0.949  1.000  0.532 11.209
+

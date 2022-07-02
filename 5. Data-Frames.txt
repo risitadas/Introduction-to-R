@@ -1,0 +1,9 @@
+Data Frames
+
+
+we will learn :
+
+* we will be able to create a data frame
+* selecting different parts of a data frame
+* and order a data frame according to certain variables
+

@@ -1,0 +1,9 @@
+Lists
+
+
+we will learn :
+
+* lists can hold components of different types
+* creating and naming lists
+* and subset these lists
+
